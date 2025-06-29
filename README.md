@@ -1,4 +1,4 @@
-# GitHub Info Telegram Bot
+# GitHub Summary Telegram Bot
 
 Бот для получения информации о профиле GitHub через Telegram.
 
