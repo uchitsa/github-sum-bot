@@ -4,8 +4,8 @@ import requests
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CallbackContext, CommandHandler, MessageHandler, filters
 
-# TG_TOKEN = os.getenv("TG_TOKEN")
-# GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+TG_TOKEN = os.getenv("TG_TOKEN")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 HEADERS = {"Authorization": "Bearer {GITHUB_TOKEN}"}
 
