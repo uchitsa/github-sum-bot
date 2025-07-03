@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 
 import requests
@@ -69,7 +70,6 @@ def get_github_data(username: str):
         print(user_data)
         name = user_data["name"]
         stars = user_data["starredRepositories"]["totalCount"]
-
 
     except requests.exceptions.RequestException as e:
         print(f"Request failed: {e}")

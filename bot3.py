@@ -155,7 +155,7 @@ Repos contributed to: <code>{repos_contributed}</code>
 {"".join(top_repos) if top_repos else "No recent contributions"}
 
 <i>Report generated on {datetime.now().strftime('%Y-%m-%d %H:%M')}</i>
-    """
+"""
     return report.strip()
 
 
