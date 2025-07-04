@@ -135,7 +135,7 @@ def format_report(user_data: Dict[str, Any]) -> str:
     for repo_data in contributions.get("commitContributionsByRepository", [])[:3]:
         repo = repo_data["repository"]
         contributions = repo_data["contributions"]["totalCount"]
-        top_repos.append(f"• {repo['nameWithOwner']} (⭐ {repo['stargazerCount']}, commits: {contributions})")
+        top_repos.append(f"• {repo['nameWithOwner']} (⭐ {repo['stargazerCount']}, commits: {contributions})\n")
 
     report = f"""
 <b>{name}'s GitHub Report</b> (@{username})
