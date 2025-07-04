@@ -138,7 +138,7 @@ def format_report(user_data: Dict[str, Any]) -> str:
         top_repos.append(f"• {repo['nameWithOwner']} (⭐ {repo['stargazerCount']}, commits: {contributions})\n")
 
     report = f"""
-<b>{name}'s GitHub Report</b> (@{username})
+<b>{name if name else username}'s GitHub Report</b> (@{username})
 {bio}
 
 📊 <b>Activity (last year)</b>
@@ -153,8 +153,6 @@ Repos contributed to: <code>{repos_contributed}</code>
 
 <b>Top Contributed Repos</b>
 {"".join(top_repos) if top_repos else "No recent contributions"}
-
-<i>Report generated on {datetime.now().strftime('%Y-%m-%d %H:%M')}</i>
 """
     return report.strip()
 
