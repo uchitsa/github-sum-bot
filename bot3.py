@@ -166,10 +166,7 @@ async def handle_username(upd: Update, ctx: CallbackContext) -> None:
         user_data = await fetch_github_data(username)
         report = format_report(user_data)
 
-        reply_markup = InlineKeyboardMarkup([[
-            InlineKeyboardButton("🔗 Share Report",
-                                 url=f"https://t.me/share/url?url=Check out @{username}'s GitHub stats!")
-        ]])
+        reply_markup = InlineKeyboardMarkup([[]])
 
         await upd.message.reply_html(report, reply_markup=reply_markup)
 
