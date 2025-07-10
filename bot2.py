@@ -12,6 +12,7 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Привет! Отправьте /github <username>, чтобы увидеть статистику профиля.")
 
+
 async def github_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if len(context.args) != 1:
         await update.message.reply_text('Используйте команду следующим образом: /github username')
@@ -39,6 +40,7 @@ async def github_info(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         logger.error(e)
         await update.message.reply_text("Что-то пошло не так...")
+
 
 def main():
     application = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
