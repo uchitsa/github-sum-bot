@@ -1,52 +1,57 @@
 # GitHub Summary Telegram Bot
 
-Бот для получения информации о профиле GitHub через Telegram.
+Github profile information telegram bot.
 
-## ⚙️ Установка
+## ⚙️ Installation
 
-1. Клонируйте репозиторий:
+Clone the repository:
 ```bash
 git clone https://github.com/yourusername/github-telegram-bot.git
 cd github-telegram-bot
+```
 
-    Установите зависимости:
+Install dependencies:
 
-bash
+```bash
 
 pip install -r requirements.txt
+```
+Create bot with BotFather telegram account and get a token
 
-    Создайте бота в BotFather и получите токен
+Run the bot:
 
-    Запустите бота:
-
-bash
+```bash
 
 export TELEGRAM_BOT_TOKEN="ваш_токен"
 python bot.py
+```
 
-🚀 Использование
+🚀 Usage
 
-    /start - Приветственное сообщение
+    /start - Welcome message
 
-    /github <username> - Информация о пользователе GitHub
+    /github <username> - Github profile info
 
-Пример:
-text
-
+Example:
+```text
 /github torvalds
+```
 
-🧪 Тестирование
-bash
+🧪 Testing
+```bash
 
 pytest
+```
 
 🔄 CI/CD
 
-Автоматические тесты запускаются при каждом коммите с помощью GitHub Actions
-🌟 Особенности
+    Automatic tests run on every commit with Github Actions
 
-    Информация о репозиториях, подписчиках и дате регистрации
+🌟 Features
 
-    Форматированные сообщения с эмодзи
+    Info about repositories, subscribers and registration date
 
-    Обработка ошибок подключения
+    Handling connection errors
+
+    Formatted messages with emoji
+
